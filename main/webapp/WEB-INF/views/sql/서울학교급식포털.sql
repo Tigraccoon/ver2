@@ -89,6 +89,24 @@
    COMMENT ON COLUMN "TB_00_MEMBER"."SCHOOL_TYPE" IS '학교급';
    COMMENT ON COLUMN "TB_00_MEMBER"."REG_DATE" IS '등록일자';
    COMMENT ON TABLE "TB_00_MEMBER"  IS '회원관리';
+   
+--------------------------------------------------------
+-- User
+  CREATE TABLE "TB_00_USER" 
+   (	
+    "USER_ID" VARCHAR2(50 BYTE), 
+	"USER_NAME" VARCHAR2(20 BYTE), 
+    "USER_PWD" VARCHAR2(50 BYTE),
+	"ADMIN_YN" VARCHAR2(1 BYTE) DEFAULT 'N' 
+	); 
+
+   COMMENT ON COLUMN "TB_00_USER"."USER_ID" IS '아이디';
+   COMMENT ON COLUMN "TB_00_USER"."USER_PWD" IS '비밀번호';
+   COMMENT ON COLUMN "TB_00_USER"."USER_NAME" IS '회원이름';
+   COMMENT ON COLUMN "TB_00_USER"."ADMIN_YN" IS '관리자여부';
+
+   
+   
 --------------------------------------------------------
 --  DDL for Table TB_00_POPUP
 --------------------------------------------------------
